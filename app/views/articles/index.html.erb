@@ -1,0 +1,17 @@
+<h1>Wikinimous</h1>
+
+<%# Lien new article %>
+<%= link_to "New article",  new_article_path(@article) %>
+
+
+<% @articles.each do |article| %>
+  <p>xxxxxxxxxxxxxxxxx</p>
+  <%= link_to article.title, article_path(article) %>
+  <p></p>
+  <%= article.content %>
+<% end %>
+
+<%# pas sur de comprendre :
+- quand est-ce qu'on met les @variables d'instances ou pas
+- cmt on ajoute un préfix quand on a codé resources :restaurant au départ
+et que nos routes ne sont donc pas visibles (on n'a pas acces au moyen de les aliaser%>
